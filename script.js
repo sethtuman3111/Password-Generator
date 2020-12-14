@@ -22,12 +22,16 @@ function generatePassword() {
     alert("Password length must be between 8-128 characters Try again");
     confirmLength = parseInt(prompt("How many characters would you like your password to contain?"));
 
+    
+
   }
   
   var confirmSpecialCharacter = confirm("Click OK to confirm if you would like to include special characters");
   var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
   var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-  var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");  
+  var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters"); 
+  
+  
 
   //If statements for concatenation
 
@@ -49,6 +53,14 @@ function generatePassword() {
 
     console.log(resultPassword)
     console.log(resultPassword[17])
+
+
+    // If user does not select any of the given options
+    while (confirmSpecialCharacter === false && confirmNumericCharacter === false && confirmLowerCase === false && confirmUpperCase === false) {
+      alert("Password must contain at least one type of character.  Please try again");
+      confirmLength = parseInt(prompt("How many characters would you like your password to contain?"));
+    }
+     
 
 
   for (var i = 0; i < confirmLength; i++) {
