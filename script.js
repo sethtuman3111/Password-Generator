@@ -12,7 +12,7 @@ var alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 //Empty Strings
 
 var resultPassword = "";
-var userPassword = "";
+var userPassword = [];
 
 // Prompt to confirm how many/type characters the user would like in their password
 function generatePassword() {
@@ -48,6 +48,8 @@ function generatePassword() {
     }
 
     console.log(resultPassword)
+    console.log(resultPassword[17])
+
 
   for (var i = 0; i < confirmLength; i++) {
     userPassword.push (resultPassword[Math.floor(Math.random() * resultPassword.length)]);
